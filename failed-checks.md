@@ -90,13 +90,13 @@ The CI workflow file must stay exactly as the template supplied it. Compare your
 
 ## In this Task
 
-<details><summary>The `unit` step fails</summary>
+<details><summary>The <code>unit</code> step fails</summary>
 
 Did you add your event names to a supplied module that an inherited test pins? Read the failing test and the module's banner.
 
 </details>
 
-<details><summary>`poe demo` halts with a budget reason</summary>
+<details><summary><code>poe demo</code> halts with a budget reason</summary>
 
 How many steps and tokens does the demo's run spend? Are your budgets set well above a legitimate run?
 
