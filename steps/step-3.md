@@ -29,19 +29,19 @@ The event names are the agent's own, kept in a module of yours. The platform's a
 
 ### An inherited test fails when you add the event names
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where did you add them? Read the banner at the top of that file.
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Read the test that failed. What does it say the platform's event list must hold?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Declare your eight names in a module of your own, as the same kind of value. Then check in the shell that the audit sink accepts one of them.
 
@@ -49,25 +49,25 @@ Declare your eight names in a module of your own, as the same kind of value. The
 
 ### `approval_requested` appears twice for one pause
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 What happens to every line in `act` before `interrupt()` when the decision arrives?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If you move the record after the pause, what does a run that's still waiting show in its trail?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 What identifies one event of one step of one run? Could the code that writes records recognize one that's already there?
 
 </details>
 
-<details><summary>Move 4</summary>
+<details><summary>Hint 4</summary>
 
 The lesson offers two ways: a check in your code before you write the record, or a small store of your own around the supplied one. Ask what each one costs when a resume runs the node again, and what each needs to know. Then pick one, keep the request record before the pause, and write the choice into your event document.
 
@@ -75,19 +75,19 @@ The lesson offers two ways: a check in your code before you write the record, or
 
 ### The trail shows `tool_called` for a call that failed
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which value decides which event you record: what the proposal asked for, or what the tool's result says?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Run your recovery script and read its trail. Is its turned-down call there as a failure, with its code?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Record the call event only for an opened result, carrying the review id. Record the failure event, carrying the code, for every other result.
 
@@ -95,19 +95,19 @@ Record the call event only for an opened result, carrying the review id. Record 
 
 ### A record carries more than it should
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which fields does your document allow for that event?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Are you passing a whole object, such as the approval record or the proposal, to the audit call?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Pass only the listed fields, and have your recording code refuse any field the document doesn't list for that event.
 
@@ -115,19 +115,19 @@ Pass only the listed fields, and have your recording code refuse any field the d
 
 ### A refused or halted run's trail has no ending
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where do you record `run_finished`: only on the finish path?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Where does every run end, whichever way it ends?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Record it wherever the status stops being `running`: after the budget check, and after any handler.
 
@@ -135,19 +135,19 @@ Record it wherever the status stops being `running`: after the budget check, and
 
 ### Your agent's records have no trace id
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where does the sink get the trace id from?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Does your agent server's process have a current trace when a node runs? Compare how the API and the worker set up tracing at startup.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Either set tracing up in the agent server, or leave it out. Whichever you do, write down what you found in your note's limits.
 
@@ -155,19 +155,19 @@ Either set tracing up in the agent server, or leave it out. Whichever you do, wr
 
 ### The trail command shows other runs' records
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 The store reads a trail by exception. What in each record tells you which run wrote it?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Keep only the records whose details carry your run id, in the order they were stored.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Read the trail where the database is reachable, the way `poe audit-trail` does.
 

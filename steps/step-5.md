@@ -40,19 +40,19 @@ For the credential test, read the token and secret values from their fixture fil
 
 ### Breaking the tool events doesn't fail your order test
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which run's trail does your order test read?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Does that run ever have a tool call that fails?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Add an order test on your recovery run's trail, which has a turned-down call, and assert the failure event appears where the call was.
 
@@ -60,19 +60,19 @@ Add an order test on your recovery run's trail, which has a turned-down call, an
 
 ### A doubled `approval_requested` passes
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Does your test count the records, or only check that one exists?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 How many pauses does the run have? How many requests should the trail hold?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Assert the exact count, then remove your once-per-step protection and watch the test fail.
 
@@ -80,19 +80,19 @@ Assert the exact count, then remove your once-per-step protection and watch the 
 
 ### Your tests can't see the records
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which audit store does the graph write to in your tests?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Could the test hand the graph a store that keeps records in a list?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Pass an in-memory store through the run configuration, the same way your tests pass the in-process tool, and read its list after the run.
 
@@ -100,19 +100,19 @@ Pass an in-memory store through the run configuration, the same way your tests p
 
 ### The credential test passes even with a token in a record
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where does the test get the value it searches for?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Is it the same value the code would write, read from the same fixture?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Put a fixture token into one record on purpose and run the test. If it still passes, the test is searching for the wrong thing.
 
@@ -120,19 +120,19 @@ Put a fixture token into one record on purpose and run the test. If it still pas
 
 ### The budget tests pass even with the check removed
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 What does each test assert: only that the run ended?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Does it check the status, the halt reason, and the absence of the packet, the job and the approval request?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Assert all five, then make the check return the state unchanged and watch the tests fail.
 

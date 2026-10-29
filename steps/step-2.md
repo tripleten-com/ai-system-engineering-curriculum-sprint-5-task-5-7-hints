@@ -24,25 +24,25 @@ Every entry must still fit the contract. A malformed entry becomes a refusal and
 
 ### Your budget script ends before it reaches the limit
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Read each entry before the limit. What does your graph do with that kind of proposal?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Which proposals end a run, and which leave it running?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 A tool call your configuration doesn't allow is turned down by the tool, and the run goes on. Which values in your authority configuration could make a call well formed but not allowed?
 
 </details>
 
-<details><summary>Move 4</summary>
+<details><summary>Hint 4</summary>
 
 The approach: fill the entries before the limit with approval requests, approved by your dev command, and tool calls with a well-formed but disallowed input. Put the valid tool call right after the limit.
 
@@ -50,19 +50,19 @@ The approach: fill the entries before the limit with approval requests, approved
 
 ### The halt fires on the wrong budget
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Add up the script's counts entry by entry. Which limit does it cross first?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Does it cross both on the same entry? The step budget wins a tie.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Lower the token counts in the step script, or use fewer, larger entries in the token script, until each crosses only its own limit.
 
@@ -70,19 +70,19 @@ Lower the token counts in the step script, or use fewer, larger entries in the t
 
 ### You can't tell whether a review was blocked or just never asked for
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where in your script is the entry that would open a review: before the limit, or after it?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Would that entry succeed if the check didn't exist? Remove the check for one run and see.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Put the valid tool call right after the limit, restore the check, and run again. The halt is now the only thing between the run and a review.
 
@@ -90,19 +90,19 @@ Put the valid tool call right after the limit, restore the check, and run again.
 
 ### The approval pause shows up in a halted run
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which step crossed the limit?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Did that step pause, or did earlier steps pause on the way there?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Earlier pauses are expected. Only the crossing step must not pause. Read your output for that step alone.
 

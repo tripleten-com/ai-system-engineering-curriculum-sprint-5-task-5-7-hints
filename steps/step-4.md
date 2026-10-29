@@ -32,19 +32,19 @@ If a value has no record behind it, or you had to guess, the trail is missing an
 
 ### You already know what the run will do
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Is this the recovery script you ran in Step 1?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If you know its steps and tokens already, what are you testing: the trail, or your memory?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Write a second recovery-shaped script with a different number of turned-down calls before the one that succeeds, run it once with every pause approved, and save the output without reading it.
 
@@ -52,19 +52,19 @@ Write a second recovery-shaped script with a different number of turned-down cal
 
 ### You can't find who approved
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which record names a decision?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Which field in it identifies the dispatcher?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 The role isn't in that record. What does the approval point guarantee about the role of every decision it accepts?
 
@@ -72,19 +72,19 @@ The role isn't in that record. What does the approval point guarantee about the 
 
 ### The total tokens don't match
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which record did you take the total from?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Is that one proposal's count, or the run's total?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Take the total from the record that ends the run.
 
@@ -92,19 +92,19 @@ Take the total from the record that ends the run.
 
 ### A value disagrees with the saved output
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Is the trail missing an event, or is an event carrying the wrong value?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Find the record you'd have needed, then find where in the code it's written.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Fix the event, not the reconstruction. Run the script again on a fresh exception and rebuild the run from the new trail.
 
